@@ -1,0 +1,92 @@
+@import "assets/styles/index.css"; /*  will look here later */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme colors */
+    --background-light: 204, 93.8%, 93.7%;
+    --heading-light: 220.9, 39.3%, 11%;
+    --text-light: 220.9, 39.3%, 11%;
+    --accent-light: 0, 62.8%, 30.6%;
+    --muted-light: 215.3, 19.3%, 34.5%;
+    --primary-light: 213.1, 93.9%, 67.8%;
+    --secondary-light: 240, 13%, 91%;
+    --destructive-light: 0, 84.2%, 60.2%;
+    --input-light: 216, 12.2%, 83.9%;
+    --model-overlay-light: 0, 0%, 0%;
+    --border-light: 240, 5.9%, 90%;
+
+    /* Dark theme colors */
+    --background-dark: 222.2, 84%, 4.9%;
+    --heading-dark: 210, 20%, 98%;
+    --text-dark: 220, 14.3%, 95.9%;
+    --accent-dark: 0, 84.2%, 60.2%;
+    --muted-dark: 215.3, 25%, 26.7%;
+    --primary-dark: 213.1, 93.9%, 67.8%;
+    --secondary-dark: 215, 13.8%, 34.1%;
+    --destructive-dark: 346.8, 77.2%, 49.8%;
+    --input-dark: 215.3, 25%, 26.7%;
+    --model-overlay-dark: 0, 0%, 0%;
+    --border-dark: 240, 3.7%, 15.9%;
+
+    /* Default to light theme values */
+    --background: var(--background-light);
+    --heading: var(--heading-light);
+    --text: var(--text-light);
+    --accent: var(--accent-light);
+    --muted: var(--muted-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --destructive: var(--destructive-light);
+    --input: var(--input-light);
+    --model-overlay: var(--model-overlay-light);
+    --border: var(--border-light);
+  }
+
+  /* Dark theme overrides */
+  .dark {
+    --background: var(--background-dark);
+    --heading: var(--heading-dark);
+    --text: var(--text-dark);
+    --accent: var(--accent-dark);
+    --muted: var(--muted-dark);
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --destructive: var(--destructive-dark);
+    --input: var(--input-dark);
+    --model-overlay: var(--model-overlay-dark);
+    --border: var(--border-dark);
+  }
+}
+
+/* 
+* - notification colors  
+* - input box colors
+* - border 
+*/
+
+@layer base {
+  body {
+    @apply bg-background;
+  }
+  .app-border {
+    @apply border border-border-red;
+  }
+}
+
+/* Additional custom styles */
+@layer utilities {
+  .Hide-Scroll-Track::-webkit-scrollbar {
+    display: none;
+  }
+  .Hide-Scroll-Track {
+    -ms-overflow-style: none;
+  }
+  .gridLines > *,
+  .gridLines {
+    @apply border border-dashed border-border-red;
+  }
+}

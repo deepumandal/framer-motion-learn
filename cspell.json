@@ -1,0 +1,7 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": ["LICENCE"],
+  "ignorePaths": ["node_modules", "dist", "build"],
+  "ignoreWords": []
+}
